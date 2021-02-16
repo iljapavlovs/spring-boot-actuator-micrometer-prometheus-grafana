@@ -1,0 +1,24 @@
+POST http://localhost:8080/persons
+Content-Type: application/json
+
+{
+  "name": "Ilja",
+  "ssn": "3242"
+}
+
+###
+GET http://localhost:8080/persons/{{id}}
+
+
+
+### ACTUATOR
+
+# check all available
+GET http://localhost:8080/actuator
+
+###
+# used for devops/helm/ims-provisioner/values.yaml
+GET http://localhost:8080/actuator/health/liveness
+###
+GET http://localhost:8080/actuator/health/readiness
+
